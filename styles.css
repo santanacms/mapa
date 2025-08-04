@@ -1,0 +1,114 @@
+/* Estilos Globais do Body */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+  /* Define uma fonte padrão se não for sobrescrita por Bootstrap ou estilos de página */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Estilos Comuns da Navbar */
+.navbar-custom {
+  box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15) !important;
+  /* O fundo da navbar-custom pode ser definido aqui ou usar variáveis Bootstrap que mudam com o tema */
+}
+
+/* Cores dos links da navbar-custom para o TEMA CLARO */
+[data-bs-theme="light"] .navbar-custom .navbar-brand,
+[data-bs-theme="light"] .navbar-custom .nav-link {
+  color: rgba(0, 0, 0, 0.7) !important; /* Texto mais escuro para o tema claro */
+}
+
+[data-bs-theme="light"] .navbar-custom .nav-link:hover,
+[data-bs-theme="light"] .navbar-custom .nav-link.active {
+  color: rgba(0, 0, 0, 0.9) !important; /* Texto ainda mais escuro para hover/ativo no tema claro */
+}
+
+/* Cores dos links da navbar-custom para o TEMA ESCURO */
+[data-bs-theme="dark"] .navbar-custom .navbar-brand,
+[data-bs-theme="dark"] .navbar-custom .nav-link {
+  color: rgba(255, 255, 255, 0.85) !important; /* Texto claro original para o tema escuro */
+}
+
+[data-bs-theme="dark"] .navbar-custom .nav-link:hover,
+[data-bs-theme="dark"] .navbar-custom .nav-link.active {
+  color: #fff !important; /* Texto branco para hover/ativo no tema escuro */
+}
+
+
+/* Estilos para o container principal para consistência */
+.main-container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* Estilos para Cards */
+.card {
+  border-radius: 0.75rem; /* Bordas mais arredondadas */
+  /* box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); Leve sombra para profundidade */
+}
+
+/* Botões com um pouco mais de destaque */
+.btn-primary {
+  /* box-shadow: 0 0.125rem 0.25rem rgba(var(--bs-primary-rgb), 0.3); */
+}
+
+/* Melhorias de acessibilidade para foco */
+a:focus, button:focus, input:focus, select:focus, textarea:focus {
+  outline: 2px solid var(--bs-primary-border-subtle); /* Ou uma cor de foco mais proeminente */
+  outline-offset: 2px;
+  box-shadow: 0 0 0 0.2rem rgba(var(--bs-primary-rgb), 0.25); /* Sombra de foco do Bootstrap */
+}
+
+
+/* Ajustes para o tema escuro se o data-bs-theme não cobrir tudo */
+[data-bs-theme="dark"] body {
+  /* background-color: #212529; /* Cor de fundo escura padrão do Bootstrap */
+  /* color: #dee2e6; /* Cor de texto clara padrão do Bootstrap */
+}
+
+[data-bs-theme="dark"] .navbar-custom {
+  /* background-color: #343a40; /* Exemplo de cor de navbar para tema escuro */
+}
+
+/* Adicione mais estilos compartilhados conforme necessário */
+
+/* Estilo para placeholder de alerta se não existir */
+#alertPlaceholder:empty {
+  display: none; /* Esconde se vazio */
+}
+
+/* Estilo para o ícone de perfil no login */
+.profile-icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bs-primary); /* Usando variável Bootstrap */
+  color: white;
+  border-radius: 50%;
+  font-size: 2.5rem;
+  box-shadow: 0 5px 15px rgba(var(--bs-primary-rgb), 0.4);
+}
+
+/* Estilo para tool cards na página de login/ferramentas */
+.tool-card {
+  border: none;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  background: var(--bs-card-bg); /* Usando variável Bootstrap */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  height: 100%;
+}
+
+.tool-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.tool-icon {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--bs-primary); /* Usando variável Bootstrap */
+}
+
